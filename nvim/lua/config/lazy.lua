@@ -54,3 +54,4 @@ require("lazy").setup({
 
 require("config.indent")
 require("config.colorscheme")
+require("config.textwrapper")
