@@ -27,3 +27,10 @@ vim.keymap.set("n", "<leader>bx", ":bdelete<CR>", { desc = "Close Buffer" })
 vim.keymap.set("n", "<leader>fw", function()
   require("telescope.builtin").live_grep()
 end, { desc = "Find Text in Files" })
+
+vim.keymap.set(
+  "n",
+  "<leader>os",
+  ":!openscad -o %:r.stl %<CR>",
+  { silent = true, desc = "Export Openscad File to STL" }
+)
