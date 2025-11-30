@@ -4,24 +4,17 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 alias ls="ls -ltra --color=auto"
 alias cursor="/usr/local/bin/cursor --no-sandbox"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 setopt NO_BEEP
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     if ! tmux has-session -t tmux-env 2>/dev/null; then
-	tmux new-session -d -s tmux-env -n H0ME -c ~/
 
-	tmux new-window -t tmux-env:1 -n VPN -c ~/home/vpn/openvpn/
-	tmux send-keys -t tmux-env:1 'sudo openvpn mesovpn.ovpn' C-m
+	tmux new-session -d -s tmux-env -n HOME -c ~/dev/
 
-	tmux new-window -t tmux-env:2 -n .zshrc
-	tmux send-keys -t tmux-env:2 'nvim .zshrc' C-m
-
-	tmux new-window -t tmux-env:3 -n .tmux.conf
-	tmux send-keys -t tmux-env:3 'nvim .tmux.conf' C-m
-
-	tmux new-window -t tmux-env:4 -n kitty.conf -c ~/.config/kitty
-	tmux send-keys -t tmux-env:4 'nvim kitty.conf' C-m
+	tmux new-window -t tmux-env:1 -n notes
+	tmux send-keys -t tmux-env:1 'nvim' C-m
 
 	tmux select-window -t tmux-env:0
     fi
