@@ -1,0 +1,17 @@
+* {
+    font-family: "0xProto Nerd Font Mono";
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #1e1e2e;
+}
+
+#workspaces button {
+    border-radius: 5px;
+    padding: 3px 6px;
+    margin: 0 2px;
+}
+
+#workspaces button.active {
+    background: #f38ba8;
+    color: #1e1e2e;
+}
