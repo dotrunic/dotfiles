@@ -23,13 +23,13 @@ return {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
-    confing = function()
+    config = function()
       require("catppuccin").setup({
+        transparent_background = true,
         float = {
           transparent = true,
-          solid = true,
+          solid = false,
         },
-        transparent_background = true,
       })
     end,
   },
@@ -41,6 +41,15 @@ return {
         styles = {
           transparency = true,
         },
+      })
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    config = function()
+      require("kanagawa").setup({
+        transparent = true,
       })
     end,
   },
