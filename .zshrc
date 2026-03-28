@@ -13,10 +13,8 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 
 	tmux new-session -d -s tmux-env -n codingland -c ~/dev/
 	
-    tmux new-window -t tmux-env:1 -n terminal
-
-    tmux new-window -t tmux-env:2 -n dotFiles -c ~/dev/dotfiles/
-	tmux send-keys -t tmux-env:2 'nvim' C-m
+    tmux new-window -t tmux-env:1 -n dotFiles -c ~/dev/dotfiles/
+	tmux send-keys -t tmux-env:1 'nvim' C-m
 
 	tmux select-window -t tmux-env:0
     fi
