@@ -4,7 +4,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 alias ls="ls -ltra --color=auto"
 alias cursor="/usr/local/bin/cursor --no-sandbox"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 setopt NO_BEEP
 
