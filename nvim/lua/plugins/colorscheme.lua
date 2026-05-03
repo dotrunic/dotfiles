@@ -1,12 +1,9 @@
 return {
   {
     "Shatur/neovim-ayu",
-    lazy = false, -- load during startup
-    priority = 1000, -- make sure it loads before other UI stuff
+    lazy = false,
     config = function()
       require("ayu").setup({
-        mirage = false, -- or true for mirage variant
-        background = "dark",
         overrides = {
           Normal = { bg = "NONE" },
           NormalNC = { bg = "NONE" },
@@ -50,6 +47,32 @@ return {
     config = function()
       require("kanagawa").setup({
         transparent = true,
+      })
+    end,
+  },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    config = function()
+      require("solarized-osaka").setup({
+        transparent = true,
+        terminal_colors = true,
+      })
+    end,
+  },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    config = function()
+      require("cyberdream").setup({
+        transparent = true,
+        hide_fillchars = true,
+
+        colors = {
+          dark = {
+            fg = "#E6E6E6",
+          },
+        },
       })
     end,
   },

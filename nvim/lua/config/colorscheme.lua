@@ -1,2 +1,2 @@
 vim.opt.termguicolors = true
-vim.cmd.colorscheme("ayu-mirage")
+vim.cmd.colorscheme("ayu")
